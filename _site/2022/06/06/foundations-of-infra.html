@@ -1,0 +1,259 @@
+<!-- _layouts/default.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- _includes/head.html -->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Foundations of Infra: OIDC | infrablog</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Foundations of Infra: OIDC" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="You might have seen those letters as you navigate the web, but what do they mean. Well the first three letters are for OpenID. You may remember this as an early way to login to some of the web apps you used." />
+<meta property="og:description" content="You might have seen those letters as you navigate the web, but what do they mean. Well the first three letters are for OpenID. You may remember this as an early way to login to some of the web apps you used." />
+<link rel="canonical" href="http://localhost:4000/2022/06/06/foundations-of-infra.html" />
+<meta property="og:url" content="http://localhost:4000/2022/06/06/foundations-of-infra.html" />
+<meta property="og:site_name" content="infrablog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-06-06T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Foundations of Infra: OIDC" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-06-06T00:00:00-07:00","datePublished":"2022-06-06T00:00:00-07:00","description":"You might have seen those letters as you navigate the web, but what do they mean. Well the first three letters are for OpenID. You may remember this as an early way to login to some of the web apps you used.","headline":"Foundations of Infra: OIDC","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2022/06/06/foundations-of-infra.html"},"url":"http://localhost:4000/2022/06/06/foundations-of-infra.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/assets/main.css" />
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="infrablog" /> 
+</head>
+
+
+  <body>
+    <!-- _includes/header.html -->
+<header class="site-header" role="banner">
+  <div class="wrapper">
+     
+    <a class="site-title" rel="author" href="/">
+      
+      infrablog
+    </a>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper"><link href="/css/override.css" rel="stylesheet" type="text/css" />
+<article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">
+      Foundations of Infra: OIDC
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2022-06-06T00:00:00-07:00"
+        itemprop="datePublished"
+      >Jun 6, 2022
+      </time>
+      </p>
+  </header>
+
+  <div class="share-links"><style>
+  #share-buttons {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  #share-buttons:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #share-buttons > div {
+    position: relative;
+    text-align: left;
+    height: 36px;
+    width: 32px;
+    float: left;
+    text-align: center;
+  }
+  #share-buttons > div > svg {
+    height: 16px;
+    fill: #d5d5d5;
+    margin-top: 10px;
+  }
+  #share-buttons > div:hover {
+    cursor: pointer;
+  }
+  #share-buttons > div.facebook:hover > svg {
+    fill: #3b5998;
+  }
+  #share-buttons > div.twitter:hover > svg {
+    fill: #55acee;
+  }
+  #share-buttons > div.linkedin:hover > svg {
+    fill: #0077b5;
+  }
+  #share-buttons > div.gplus:hover > svg {
+    fill: #dd4b39;
+  }
+  #share-buttons > div.mail:hover > svg {
+    fill: #7d7d7d;
+  }
+  #share-buttons > div.instagram:hover > svg {
+    fill: #c73b92;
+  }
+  #share-buttons > div.facebook > svg {
+    height: 18px;
+    margin-top: 9px;
+  }
+  #share-buttons > div.twitter > svg {
+    height: 20px;
+    margin-top: 8px;
+  }
+  #share-buttons > div.linkedin > svg {
+    height: 19px;
+    margin-top: 7px;
+  }
+  #share-buttons > div.pinterest > svg {
+    height: 20px;
+    margin-top: 9px;
+  }
+  #share-buttons > div.gplus > svg {
+    height: 17px;
+    margin-top: 9px;
+    position: relative;
+    left: 1px;
+  }
+  #share-buttons > div.mail > svg {
+    height: 14px;
+    margin-top: 11px;
+  }
+</style>
+
+  
+
+<span style="color: silver">Share on: </span>
+<div id="share-buttons">
+  <div
+    class="facebook"
+    title="Share this on Facebook"
+    onclick="window.open('http://www.facebook.com/share.php?u=http%3A%2F%2Flocalhost%3A4000%2F2022%2F06%2F06%2Ffoundations-of-infra.html','popup','width=600,height=600'); return false;"
+  >
+    <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"
+      />
+    </svg>
+  </div>
+  <div
+    class="twitter"
+    title="Share this on Twitter"
+    onclick="window.open('https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A4000%2F2022%2F06%2F06%2Ffoundations-of-infra.html&text=Foundations+of+Infra%3A+OIDC&via=','popup','width=600,height=600'); return false;"
+  >
+    <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"
+      />
+    </svg>
+  </div>
+  <div
+    class="linkedin"
+    title="Share this on Linkedin"
+    onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Flocalhost%3A4000%2F2022%2F06%2F06%2Ffoundations-of-infra.html','popup','width=600,height=600'); return false;"
+  >
+    <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"
+      />
+    </svg>
+  </div>
+  <div
+    class="gplus"
+    title="Share this on Google Plus"
+    onclick="window.open('https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2F2022%2F06%2F06%2Ffoundations-of-infra.html','popup','width=600,height=600'); return false;"
+  >
+    <svg viewBox="0 0 2304 1792" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M1437 913q0 208-87 370.5t-248 254-369 91.5q-149 0-285-58t-234-156-156-234-58-285 58-285 156-234 234-156 285-58q286 0 491 192l-199 191q-117-113-292-113-123 0-227.5 62t-165.5 168.5-61 232.5 61 232.5 165.5 168.5 227.5 62q83 0 152.5-23t114.5-57.5 78.5-78.5 49-83 21.5-74h-416v-252h692q12 63 12 122zm867-122v210h-209v209h-210v-209h-209v-210h209v-209h210v209h209z"
+      />
+    </svg>
+  </div>
+  <div
+    class="mail"
+    title="Share this through Email"
+    onclick="window.open('mailto:?&body=http%3A%2F%2Flocalhost%3A4000%2F2022%2F06%2F06%2Ffoundations-of-infra.html&subject=%5BBlog%5D++-+Foundations+of+Infra%3A+OIDC','popup','width=600,height=600'); return false;"
+  >
+    <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"
+      />
+    </svg>
+  </div>
+</div>
+</div>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>You might have seen those letters as you navigate the web, but what do they mean. Well the first three letters are for OpenID. You may remember this as an early way to login to some of the web apps you used.
+<img src="https://user-images.githubusercontent.com/633681/170083260-61cb286c-7273-42b5-86a8-635135736d24.jpg" alt="openid" /></p>
+
+<p>But versions 1 and 2 of OpenID didn’t get a lot of adoption. Version 3, or <a href="https://openid.net/connect/">OpenID Connect</a>, got rid of the XML and custom message signature schema used and instead leverages OAuth 2 which uses TLS. TLS is already in use on every client and server platform today.</p>
+
+<p>So what is OAuth 2? Well OAuth is an authorization framework. Version 2 of OAuth came out around 2013 and simplified the flows quite a bit (while also causing a <a href="https://www.cnet.com/tech/services-and-software/oauth-2-0-leader-resigns-says-standard-is-bad/">little bit</a> of <a href="https://gist.github.com/nckroy/dd2d4dfc86f7d13045ad715377b6a48f">Internet drama</a>). OIDC wraps around that and provides authentication. OAuth on its own doesn’t really provide a standard method for a user to login and provide a password or other verification step. OIDC is what enables that authentication to happen.</p>
+
+<p>For Infra, we use OIDC providers to validate that you are who you say you are. There are quite a few steps involved with that and in the description below this video I will call out some great resources if you want to understand it in more detail. And we use OIDC and OAuth 2.0 throughout the solution to make sure you always have the right access for you.</p>
+
+<p>Infra is made of a few key components. There is a CLI as well as a web UI. Then there is a server component that stores information in a database. You are going to have one server. Then for each cluster you want to connect to, there is a ‘connector’.</p>
+
+<p>First you use the CLI to login. When you do that, it gives you a choice depending on how infra has been configured. You might login locally or with an OIDC provider such as <a href="https://www.okta.com/">Okta</a> (you may see providers referred to as Identity Providers or IdPs).
+<img src="https://user-images.githubusercontent.com/633681/170083801-dad62174-8766-436b-9b29-5502aa6af80d.gif" alt="oidc_flow_for_blog_gif_1 2022-05-24_08_55_02" /></p>
+
+<p>Once you have verified your identity, the IdP sends a code back to the Infra CLI. That code, which is just a long string of alphanumeric characters, is then sent to the Infra server. The server then sends that to the IdP which says that that code was just generated for this specific user. The IdP returns some tokens to the server that verify information about the user.</p>
+
+<p>Now we know that you are who you say you are and we use this information to generate an access key that you can then use to access the infrastructure. During the configuration of Infra, you would have been granted access to a number of clusters. You now should see all the clusters you have access to in your kubeconfig files, even if those files were blank before logging in.</p>
+
+<p><img src="https://user-images.githubusercontent.com/633681/170083625-79151986-2e96-4ecc-bdcd-ddd5eb5ada74.jpg" alt="kubeconfig" /></p>
+
+<p>When you use a tool such as kubectl to gain access to one of those clusters, it will check with the server to ensure you still have access. The server generates a JavaScript Web Token, or JWT, though it’s usually pronounced as JOT. That JWT is sent over to the cluster and the connector on the cluster sees that the JWT has been signed by the server so it can trust that you really have access.</p>
+
+<p><img src="https://user-images.githubusercontent.com/633681/170084039-d19ea450-2f52-4db0-a770-b2bd7d2dc243.gif" alt="oidc_flow_for_blog_gif_2 2022-05-24_09_09_16" /></p>
+
+<p>Assuming you have the access required to perform the action you ran, you will get the corresponding results. We will revalidate that you still have access every 5 minutes. That 5 minute interval is configurable, but if you increase the frequency, you may run into rate limits set by the IdP.</p>
+
+<p>And that is how OIDC works in the context of Infra. This post is also available as a video on our YouTube channel.</p>
+
+<p>https://www.youtube.com/watch?v=gGPyOUtXoKE</p>
+ <hr />
+<div class="post_navi"><a
+    class="post_navi-item nav_prev"
+    href="http://localhost:4000/archive.html"
+    title="Blog Home"
+  >
+    <div class="post_navi-arrow">&lt;</div>
+    <div class="post_navi-label">Blog Home</div>
+    <div><span>Home Page</span></div>
+  </a><a
+    class="post_navi-item nav_next"
+    href="http://localhost:4000/index.html"
+    title="Blog Home"
+  >
+    <div class="post_navi-arrow">&gt;</div>
+    <div class="post_navi-label">Blog Home</div>
+    <div><span>Home Page</span></div>
+  </a></div>
+
+  </div>
+
+  <a class="u-url" href="/2022/06/06/foundations-of-infra.html" hidden></a>
+</article>
+</div>
+    </main>
+
+    <!--  -->
+  </body>
+</html>
