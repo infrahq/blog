@@ -1,0 +1,53 @@
+/* Infra Css Override */
+
+/* base */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: #fff;
+  font-family: neuzeit-grotesk, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #181b1e;
+}
+
+/* typography */
+
+.post-link, .post-title {
+  color: #0A0E12;
+  font-size: 88px;
+  font-weight: 100;
+  line-height: .9em;
+  letter-spacing: -0.06em;
+  transition: .2s ease-in all;
+}
+
+a.post-link:visited {
+  color: #0A0E12;
+}
+
+a.post-link:hover {
+  text-decoration: none;
+}
+
+p {
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  color: #0A0E12;
+}
+
+.post-meta {
+  padding: 0px 0 11px;
+  display: block;
+  color: #0A0E12;
+  font-size: 16px;
+}
+
+.site-header {
+  border: none;
+}
