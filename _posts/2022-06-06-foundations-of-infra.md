@@ -7,7 +7,7 @@ tags: oidc infra foundations
 ![Infra on openid](https://raw.githubusercontent.com/infrahq/blog/main/assets/img/OpenID.png)
 You might have seen those letters as you navigate the web, but what do they mean. Well the first three letters are for OpenID. You may remember this as an early way to login to some of the web apps you used.
 
-![openid](https://user-images.githubusercontent.com/633681/170083260-61cb286c-7273-42b5-86a8-635135736d24.jpg)
+![openid](https://raw.githubusercontent.com/infrahq/blog/main/assets/img/InfraOpenID.png)
 
 But versions 1 and 2 of OpenID didn't get a lot of adoption. Version 3, or [OpenID Connect](https://openid.net/connect/), got rid of the XML and custom message signature schema used and instead leverages OAuth 2 which uses TLS. TLS is already in use on every client and server platform today.
 
