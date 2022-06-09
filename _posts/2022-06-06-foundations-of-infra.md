@@ -5,7 +5,7 @@ tags: oidc infra foundations
 # Foundations of Infra: OIDC
 
 ![Infra on openid](https://raw.githubusercontent.com/infrahq/blog/main/assets/img/OpenID.png)
-You might have seen those letters as you navigate the web, but what do they mean. Well the first three letters are for OpenID. You may remember this as an early way to login to some of the web apps you used.
+**You might have seen those letters as you navigate the web, but what do they mean.** Well the first three letters are for OpenID. You may remember this as an early way to login to some of the web apps you used.
 
 ![openid](https://raw.githubusercontent.com/infrahq/blog/main/assets/img/InfraOpenID.png)
 

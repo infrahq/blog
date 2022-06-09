@@ -4,6 +4,8 @@
 /* base */
 /* header */
 /* typography */
+/* share links */
+/* jekyll override */
 
 /* ============================================== base */
 
@@ -83,10 +85,11 @@ a.post-link:hover {
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.5em;
+  font-size: 19px;
+  line-height: 1.8em;
   font-family: 'Alegreya', serif;
-  color: #21262a;
+  color: #313940
+  font-weight: 400;
 }
 
 .post-meta {
@@ -104,6 +107,20 @@ p {
 /* images */
 .page-content img {
     margin: 0 0 20px;
+}
+
+/* ============================================== share links */
+
+.share-links {
+  margin: -40px 0 20px;
+}
+
+.share-links span {
+  color: #888c90;
+}
+
+.page-content #share-buttons > div > svg {
+  fill: #000 ;
 }
 
 /* ============================================== overide jekyll styles */
