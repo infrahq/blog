@@ -68,7 +68,7 @@ html, body {
 .post-link {
   color: #0A0E12;
   font-size: 128px;
-  font-weight: 400;
+  font-weight: 100;
   line-height: .9em;
   letter-spacing: -0.06em;
   transition: .2s ease-in all;
@@ -93,7 +93,7 @@ p {
   font-family: neuzeit-grotesk, sans-serif;
   padding: 0px 0 11px;
   display: block;
-  color: #0A0E12;
+  color: #888c90;
   font-size: 16px;
 }
 
