@@ -1,6 +1,11 @@
 /* Infra Css Override */
 
+/* Table of Contents */
 /* base */
+/* header */
+/* typography */
+
+/* ============================================== base */
 
 * {
   margin: 0;
@@ -16,12 +21,54 @@ html, body {
   color: #181b1e;
 }
 
-/* typography */
+/* ============================================== header */
 
-.post-link, .post-title {
+.header {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1472px;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+}
+
+.header nav {
+  float: right;
+  padding: 16px 0 0;
+}
+
+.header nav a {
+  margin: 0 10px;
+  color: #181b1e;
+  font-size: 16px;
+  opacity: 1;
+  transition: all ease-in .2s;
+}
+
+.header nav a:hover {
+  text-decoration: none;
+  opacity: .7;
+}
+
+.header img {
+  padding: 0 0 0 20px;
+}
+
+/* ============================================== typography */
+
+
+.post-title {
   color: #0A0E12;
   font-size: 88px;
   font-weight: 100;
+  line-height: .9em;
+  letter-spacing: -0.06em;
+  transition: .2s ease-in all;
+}
+
+.post-link {
+  color: #0A0E12;
+  font-size: 128px;
+  font-weight: 400;
   line-height: .9em;
   letter-spacing: -0.06em;
   transition: .2s ease-in all;
@@ -36,9 +83,10 @@ a.post-link:hover {
 }
 
 p {
-  font-size: 16px;
-  font-family: 'Inter', sans-serif;
-  color: #0A0E12;
+  font-size: 18px;
+  line-height: 1.5em;
+  font-family: 'Alegreya', serif;
+  color: #21262a;
 }
 
 .post-meta {
@@ -58,7 +106,7 @@ p {
     margin: 0 0 20px;
 }
 
-/* overide jekyll styles */
+/* ============================================== overide jekyll styles */
 
 hr {
   margin-top: 30px;

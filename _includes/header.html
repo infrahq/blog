@@ -1,10 +1,23 @@
 <!-- _includes/header.html -->
+<div class="header">
+  <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
+    <img src="{{ '/assets/img/InfraBlog.svg' | relative_url }}">
+  </a>
+  <nav class="InfraNavigation">
+    <a href="https://infrahq.com">InfraHQ.com</a>
+    <a href="#">Documentation</a>
+    <a href="#">About</a>
+    <a href="#">Open in Github</a>
+  </nav>
+</div>
+
+<!-- jeckyll header
+
 <header class="site-header" role="banner">
   <div class="wrapper">
     {% assign default_paths = site.pages | map: "path" %} {% assign page_paths =
     site.header_pages | default: default_paths %}
-    <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
-      <img src="{{ '/assets/img/InfraBlog.svg' | relative_url }}">
-    </a>
   </div>
 </header>
+
+-->

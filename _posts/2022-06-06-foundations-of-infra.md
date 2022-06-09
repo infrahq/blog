@@ -18,6 +18,7 @@ For Infra, we use OIDC providers to validate that you are who you say you are. T
 Infra is made of a few key components. There is a CLI as well as a web UI. Then there is a server component that stores information in a database. You are going to have one server. Then for each cluster you want to connect to, there is a 'connector'.
 
 First you use the CLI to login. When you do that, it gives you a choice depending on how infra has been configured. You might login locally or with an OIDC provider such as [Okta](https://www.okta.com/) (you may see providers referred to as Identity Providers or IdPs).
+
 ![oidc_flow_for_blog_gif_1 2022-05-24_08_55_02](https://user-images.githubusercontent.com/633681/170083801-dad62174-8766-436b-9b29-5502aa6af80d.gif)
 
 Once you have verified your identity, the IdP sends a code back to the Infra CLI. That code, which is just a long string of alphanumeric characters, is then sent to the Infra server. The server then sends that to the IdP which says that that code was just generated for this specific user. The IdP returns some tokens to the server that verify information about the user.

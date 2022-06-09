@@ -30,20 +30,36 @@
   <link rel="stylesheet" href="https://use.typekit.net/kve4ydx.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 
   <body>
     <!-- _includes/header.html -->
+<div class="header">
+  <a class="site-title" rel="author" href="/">
+    <img src="/assets/img/InfraBlog.svg">
+  </a>
+  <nav class="InfraNavigation">
+    <a href="https://infrahq.com">InfraHQ.com</a>
+    <a href="#">Documentation</a>
+    <a href="#">About</a>
+    <a href="#">Open in Github</a>
+  </nav>
+</div>
+
+<!-- jeckyll header
+
 <header class="site-header" role="banner">
   <div class="wrapper">
      
-    <a class="site-title" rel="author" href="/">
-      <img src="/assets/img/InfraBlog.svg">
-    </a>
   </div>
 </header>
+
+-->
 
 
     <main class="page-content" aria-label="Content">
@@ -215,8 +231,9 @@ You might have seen those letters as you navigate the web, but what do they mean
 
 <p>Infra is made of a few key components. There is a CLI as well as a web UI. Then there is a server component that stores information in a database. You are going to have one server. Then for each cluster you want to connect to, there is a ‘connector’.</p>
 
-<p>First you use the CLI to login. When you do that, it gives you a choice depending on how infra has been configured. You might login locally or with an OIDC provider such as <a href="https://www.okta.com/">Okta</a> (you may see providers referred to as Identity Providers or IdPs).
-<img src="https://user-images.githubusercontent.com/633681/170083801-dad62174-8766-436b-9b29-5502aa6af80d.gif" alt="oidc_flow_for_blog_gif_1 2022-05-24_08_55_02" /></p>
+<p>First you use the CLI to login. When you do that, it gives you a choice depending on how infra has been configured. You might login locally or with an OIDC provider such as <a href="https://www.okta.com/">Okta</a> (you may see providers referred to as Identity Providers or IdPs).</p>
+
+<p><img src="https://user-images.githubusercontent.com/633681/170083801-dad62174-8766-436b-9b29-5502aa6af80d.gif" alt="oidc_flow_for_blog_gif_1 2022-05-24_08_55_02" /></p>
 
 <p>Once you have verified your identity, the IdP sends a code back to the Infra CLI. That code, which is just a long string of alphanumeric characters, is then sent to the Infra server. The server then sends that to the IdP which says that that code was just generated for this specific user. The IdP returns some tokens to the server that verify information about the user.</p>
 
