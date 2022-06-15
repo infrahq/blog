@@ -1,3 +1,8 @@
+---
+tags: jwt, foundations
+author: Matt Williams
+---
+
 # Foundations of Infra: JWT
 
 ![Infra on jwt](https://raw.githubusercontent.com/infrahq/blog/main/assets/img/JWTHero.jpg)
