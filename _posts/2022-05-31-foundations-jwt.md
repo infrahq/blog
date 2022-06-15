@@ -1,12 +1,12 @@
 # Foundations of Infra: JWT
 
-![Infra on jwt](../assets/img/JWTHero.jpg)
+![Infra on jwt](https://raw.githubusercontent.com/infrahq/blog/main/assets/img/JWTHero.jpg)
 
 **JWT. JSON Web Token.** But it's usually pronounced as jot. If you hear someone say something about a jot, it might actually be about a JSON Web Token. What is a JSON Web Token? It's simply a way to share some fact between services in a verifiable way.
 
 The actual RFC for JWT says that it is a compact, url-safe means of representing claims to be transferred between two parties and that the claim can be cryptographically signed. A claim is any 'piece of information' about a subject. URL-Safe just means using any characters that are allowed in any URI. And cryptographically signed means that the payload cannot be modified without invalidating the signature.
 
-![Infra on jwt](../assets/img/jwtspec.jpg)
+![Infra on jwt](https://raw.githubusercontent.com/infrahq/blog/main/assets/img/jwtspec.jpg)
 
 If you look around the web for information about JWT, you will find a lot of articles and videos that explain how to use them, along with a bunch that say they are terrible and no one should ever use them. The folks who say they are terrible, are mostly focused on one use-case, and two implementation details.
 
