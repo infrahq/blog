@@ -27,7 +27,7 @@ Now we know that you are who you say you are and we use this information to gene
 
 ![kubeconfig](https://user-images.githubusercontent.com/633681/170083625-79151986-2e96-4ecc-bdcd-ddd5eb5ada74.jpg)
 
-When you use a tool such as kubectl to gain access to one of those clusters, it will check with the server to ensure you still have access. The server generates a JavaScript Web Token, or JWT, though it’s usually pronounced as JOT. That JWT is sent over to the cluster and the connector on the cluster sees that the JWT has been signed by the server so it can trust that you really have access.
+When you use a tool such as kubectl to gain access to one of those clusters, it will check with the server to ensure you still have access. The server generates a JavaScript Web Token, or JWT, though it's usually pronounced as JOT. That JWT is sent over to the cluster and the connector on the cluster sees that the JWT has been signed by the server so it can trust that you really have access.
 
 ![oidc_flow_for_blog_gif_2 2022-05-24_09_09_16](https://user-images.githubusercontent.com/633681/170084039-d19ea450-2f52-4db0-a770-b2bd7d2dc243.gif)
 
@@ -38,6 +38,6 @@ And that is how OIDC works in the context of Infra. This post is also available 
 <https://www.youtube.com/watch?v=gGPyOUtXoKE>
 
 Author:  
-Matt Williams - Technovangalist @ Infra
+Matt Williams - Technovangelist @ Infra
 
 ![Matt Williams - Technovangalist @ Infra ](https://raw.githubusercontent.com/infrahq/blog/d064a27e83742c9da69c3e00f1baa569df65dd1a/assets/img/InfraMattSig.svg)
