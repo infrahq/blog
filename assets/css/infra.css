@@ -5,6 +5,7 @@
 /* header */
 /* typography */
 /* share links */
+/* pagination */
 /* jekyll override */
 /* media queries */
 
@@ -169,6 +170,22 @@ p {
 
 .page-content #share-buttons > div > svg {
   fill: #000;
+}
+
+/* ============================================== pagination */
+
+.posts {
+  padding: 40px;
+  text-transform: uppercase;
+}
+
+.posts span, .posts a {
+  padding: 0 10px 0 0;
+}
+
+.rss-subscribe {
+  padding: 20px 40px;
+  text-transform: uppercase;
 }
 
 /* ============================================== overide jekyll styles */
