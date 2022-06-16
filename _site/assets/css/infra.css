@@ -28,14 +28,13 @@ html, body {
 .header {
   width: 100%;
   margin: 0 auto;
-  max-width: 1472px;
   padding-top: 1.3rem;
   padding-bottom: 1.3rem;
 }
 
 .header nav {
   float: right;
-  padding: 16px 0 0;
+  padding: 16px 20px 0;
 }
 
 .header nav a {
@@ -55,6 +54,58 @@ html, body {
   padding: 0 0 0 20px;
 }
 
+/* ============================================== home page layout */
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  margin: 0 20px;
+  padding: 40px 0;
+  flex-direction: row;
+  width: 90%;
+  border-bottom: 1px solid #dadada;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.double-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 2;
+}
+
+.blue-column {
+}
+
+.right-column {
+  padding: 0 0 0 100px;
+  text-align: left;
+}
+
+.right-column img {
+  margin: 0 0 20px;
+}
+
+/* ============================================== post */
+
+article {
+  max-width: 700px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
 /* ============================================== typography */
 
 
@@ -69,11 +120,10 @@ html, body {
 
 .post-link {
   color: #0A0E12;
-  font-size: 128px;
   font-weight: 100;
-  line-height: .9em;
-  letter-spacing: -0.06em;
-  transition: .2s ease-in all;
+  font-size: 6vw;
+  line-height: 5vw;
+  letter-spacing: -.4vw;
 }
 
 a.post-link:visited {
@@ -94,19 +144,37 @@ p {
 
 .post-meta {
   font-family: neuzeit-grotesk, sans-serif;
-  padding: 0px 0 11px;
+  padding: 0px 0 11px 12px;
   display: block;
   color: #888c90;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .site-header {
   border: none;
 }
 
+.infraContinue {
+  font-size: 20px;
+}
+
 /* images */
 .page-content img {
     margin: 0 0 20px;
+}
+
+/* Main page post header lines top and bottom */
+
+.infralinetop {
+  text-align: right;
+  color: #ccc;
+  margin: 0px 0 30px 12px;
+}
+
+.infralinebottom {
+  text-align: right;
+  color: #ccc;
+  margin: 30px 0 30px 12px;
 }
 
 /* ============================================== share links */

@@ -4,34 +4,49 @@ layout: default
 
 <div class="home">
   {% if page.title %}
-  <h1 class="page-heading">{{ page.title }}</h1>
-  {% endif %} {{ content }} {% if site.posts.size > 0 %}
-  <ul class="post-list">
+  <div test>
+    <h1 class="page-heading">{{ page.title }}</h1>
+    {% endif %} {{ content }} {% if site.posts.size > 0 %}
+  </div>
+  <div class="postWrapper">
     {% for post in paginator.posts %}
-    <li>
-      <div>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y"
-        %}
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        <span class="post-meta"> {{ post.date | date: date_format }} </span>
-        {% if site.show_excerpts %} {{ post.excerpt }}
-        <a href="{{ post.url | relative_url }}">continue...</a>
-        {% endif %}
+    <div class='home-wrapper'>
+      <div class='row'>
+        <div class='column'>
+          <div class='blue-column'>
+            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y"
+            %}
+            <div>
+              <h3>
+                <a class="post-link" href="{{ post.url | relative_url }}">
+                  {{ post.title | escape }}
+                </a>
+              </h3>
+              <span class="post-meta"> {{ post.date | date: date_format }} </span>
+            </div>
+          </div>
+        </div>
+        <div class='column'>
+          <div class='right-column'>
+            <div>
+              {% if site.show_excerpts %} {{ post.excerpt }}
+              <a class="infraContinue" href="{{ post.url | relative_url }}">continue...</a>
+            </div>
+          </div>
+        </div>
       </div>
-      {% if post.featured_image %}
-      <div class="featured-image">
-        <img
-          src="{{ '/assets/' | append: post.featured_image | relative_url }}"
-        />
-      </div>
-      {% endif %}
-    </li>
+    </div>
+  <div>
+{% endif %}
+</div>
+{% if post.featured_image %}
+<div class="featured-image">
+  <img
+    src="{{ '/assets/' | append: post.featured_image | relative_url }}"
+  />
+</div>
+    {% endif %}
     {% endfor %}
-  </ul>
   <!-- Pagination links -->
   {% if paginator.total_pages > 1 %}
   <div class="posts">
