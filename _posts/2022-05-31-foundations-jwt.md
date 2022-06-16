@@ -1,6 +1,7 @@
 ---
 tags: jwt foundations
 author: Matt Williams
+type: posts
 ---
 
 # Foundations of Infra: JWT
