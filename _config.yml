@@ -1,5 +1,6 @@
 theme: minima
 rss: rss
+title: Infra Blog
 show_excerpts: true
 kramdown:
   syntax_highlighter_opts:
