@@ -17,6 +17,6 @@ titles_from_headings:
 defaults:
   - scope:
       psth: ""
-      type: post
+      type: posts
     values:
       tags: Other
