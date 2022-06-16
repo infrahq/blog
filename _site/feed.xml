@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-09T16:08:17-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">blog</title><subtitle>Blog post repo </subtitle><entry><title type="html">Foundations of Infra: OIDC</title><link href="http://localhost:4000/2022/06/06/foundations-of-infra.html" rel="alternate" type="text/html" title="Foundations of Infra: OIDC" /><published>2022-06-06T00:00:00-05:00</published><updated>2022-06-06T00:00:00-05:00</updated><id>http://localhost:4000/2022/06/06/foundations-of-infra</id><content type="html" xml:base="http://localhost:4000/2022/06/06/foundations-of-infra.html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/infrahq/blog/main/assets/img/OpenID.png&quot; alt=&quot;Infra on openid&quot; /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-16T08:17:12-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Infra Blog</title><entry><title type="html">New kubernetes roles added for port-forward, exec and more!</title><link href="http://localhost:4000/2022/06/10/changelog-0.13.3.html" rel="alternate" type="text/html" title="New kubernetes roles added for port-forward, exec and more!" /><published>2022-06-10T00:00:00-07:00</published><updated>2022-06-10T00:00:00-07:00</updated><id>http://localhost:4000/2022/06/10/changelog-0.13.3</id><content type="html" xml:base="http://localhost:4000/2022/06/10/changelog-0.13.3.html">&lt;p&gt;&lt;strong&gt;This week we released version 0.13.3 of Infra which introduces a few new features and resolved a few issues.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One thing we hear from a lot of users is that they know they can create roles in Kubernetes, but they wish there were a few more basic roles included out of the box. So we added a few default ClusterRoles. After installing Infra, you will now see roles for logs, exec, and port-forward, in addition to the existing roles of clusteradmin, edit, and view. This should make everyone’s lives much easier.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/changelog-13.3-roles.gif&quot; alt=&quot;new roles in infra on k8s&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As we begin to support more OIDC providers, it’s important for the API to show which provider a user comes from. But this information wasn’t available. Now it is and will make using other providers more useful. We also added the ability to see which users are members of any given group in both the API and the CLI.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ infra groups list
+  NAME        USERS
+  Everyone    matt@example.com, patrick@example.com,
+              fred@example.com
+  Test group  patrick@example.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally in the Web UI, we added Providers. As with the CLI, Okta is supported as an OIDC provider. Other providers will be coming soon in both the UI and the CLI.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/changelog-13.3-provider-in-ui.gif&quot; alt=&quot;providers in the ui&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Find all the updates in &lt;a href=&quot;https://github.com/infrahq/infra/blob/main/CHANGELOG.md&quot;&gt;the GitHub repo changelog&lt;/a&gt;. Look at releases 0.13.2 and 0.13.3.&lt;/p&gt;</content><author><name>Matt Williams</name></author><category term="changelog" /><category term="0.13.3" /><category term="roles" /><category term="providers" /><category term="ui" /><summary type="html">This week we released version 0.13.3 of Infra which introduces a few new features and resolved a few issues.</summary></entry><entry><title type="html">Foundations of Infra: OIDC</title><link href="http://localhost:4000/2022/06/06/foundations-oidc.html" rel="alternate" type="text/html" title="Foundations of Infra: OIDC" /><published>2022-06-06T00:00:00-07:00</published><updated>2022-06-06T00:00:00-07:00</updated><id>http://localhost:4000/2022/06/06/foundations-oidc</id><content type="html" xml:base="http://localhost:4000/2022/06/06/foundations-oidc.html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/infrahq/blog/main/assets/img/OpenID.png&quot; alt=&quot;Infra on openid&quot; /&gt;
 &lt;strong&gt;You might have seen those letters as you navigate the web, but what do they mean.&lt;/strong&gt; Well the first three letters are for OpenID. You may remember this as an early way to login to some of the web apps you used.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/infrahq/blog/main/assets/img/InfraOpenID.png&quot; alt=&quot;openid&quot; /&gt;&lt;/p&gt;
@@ -29,9 +48,53 @@
 
 &lt;p&gt;And that is how OIDC works in the context of Infra. This post is also available as a video on our YouTube channel.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=gGPyOUtXoKE&quot;&gt;https://www.youtube.com/watch?v=gGPyOUtXoKE&lt;/a&gt;&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/gGPyOUtXoKE&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Matt Williams</name></author><category term="oidc" /><category term="infra" /><category term="foundations" /><summary type="html">You might have seen those letters as you navigate the web, but what do they mean. Well the first three letters are for OpenID. You may remember this as an early way to login to some of the web apps you used.</summary></entry><entry><title type="html">Foundations of Infra: JWT</title><link href="http://localhost:4000/2022/05/31/foundations-jwt.html" rel="alternate" type="text/html" title="Foundations of Infra: JWT" /><published>2022-05-31T00:00:00-07:00</published><updated>2022-05-31T00:00:00-07:00</updated><id>http://localhost:4000/2022/05/31/foundations-jwt</id><content type="html" xml:base="http://localhost:4000/2022/05/31/foundations-jwt.html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/infrahq/blog/main/assets/img/JWTHero.jpg&quot; alt=&quot;Infra on jwt&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Author:&lt;br /&gt;
-Matt Williams - Technovangalist @ Infra&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;JWT. JSON Web Token.&lt;/strong&gt; But it’s usually pronounced as jot. If you hear someone say something about a jot, it might actually be about a JSON Web Token. What is a JSON Web Token? It’s simply a way to share some fact between services in a verifiable way.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/infrahq/blog/d064a27e83742c9da69c3e00f1baa569df65dd1a/assets/img/InfraMattSig.svg&quot; alt=&quot;Matt Williams - Technovangalist @ Infra &quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="oidc" /><category term="infra" /><category term="foundations" /><summary type="html">You might have seen those letters as you navigate the web, but what do they mean. Well the first three letters are for OpenID. You may remember this as an early way to login to some of the web apps you used.</summary></entry></feed>
+&lt;p&gt;The actual RFC for JWT says that it is a compact, url-safe means of representing claims to be transferred between two parties and that the claim can be cryptographically signed. A claim is any ‘piece of information’ about a subject. URL-Safe just means using any characters that are allowed in any URI. And cryptographically signed means that the payload cannot be modified without invalidating the signature.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/infrahq/blog/main/assets/img/jwtspec.jpg&quot; alt=&quot;Infra on jwt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you look around the web for information about JWT, you will find a lot of articles and videos that explain how to use them, along with a bunch that say they are terrible and no one should ever use them. The folks who say they are terrible, are mostly focused on one use-case, and two implementation details.&lt;/p&gt;
+
+&lt;p&gt;The use case they are against is that of browser to service authentication, and mostly because, by default, the data in a JWT is unencrypted and can’t be revoked before the expiration date defined in the token. You can encrypt the data and set short expiration times, but that complicates things and by the time you do all that, there are other solutions such as session tokens that may be more appropriate.&lt;/p&gt;
+
+&lt;p&gt;Infra uses JWT for a different purpose and sets a short expiration time. In &lt;a href=&quot;2022-06-06-foundations-of-infra.md&quot;&gt;the video about OIDC&lt;/a&gt;, you saw that we use JWT to record the claim of what this user’s email address is and what groups they belong to. That on its own does not guarantee access to resources since the destination determines what access that user or group should have at run time.&lt;/p&gt;
+
+&lt;p&gt;The cryptographic signature on the claim allows the client and the destination to be confident that the user is who they claim to be and the groups are the groups they do in fact belong to. If the payload was modified, the signature would be then be invalid and the request would be rejected. Let’s take a look at one of these tokens. First the raw JWT looks like this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;eyJhbGciOiJFZERTQSIsImtpZCI6IkpPdjJISmxLYjBKTWNfQVRy
+R0JLbWFZNmdRTjdlUU5RWXh0ZXlGaHJDTEE9IiwidHlwIjoiSldU
+In0.eyJleHAiOjE2NTQ4ODU0NDcsImdyb3VwcyI6bnVsbCwiaWF0
+IjoxNjU0ODg1MTQ3LCJuYW1lIjoibWF0dEBpbmZyYWhxLmNvbSI
+sIm5iZiI6MTY1NDg4NDg0Nywibm9uY2UiOiJPeFFwTUZTdjRwIn0.
+2NSqYsFTa7ILrQljqKOa5Sx51lcPisITkQGtCCSaesf_KJZHotAB
+aIARPPvBiu4bQuGPxOOxA8wAYArcf4qiCQ
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A JWT is made of three components. First there is the header, then the payload, and finally the signature. And those three components are separated using dots or periods. So lets pull out the middle component. Each of these components is Base64 encoded. That’s what ensures the URL safe part that we mentioned before. Base64 encoding is not encryption, just a standard way of encoding the text.&lt;/p&gt;
+
+&lt;p&gt;Now that that component is Base64 decoded, we see that the payload is this. (If you would like to try this yourself, visit &lt;a href=&quot;https://jwt.io&quot;&gt;jwt.io&lt;/a&gt; and paste the encoded text above into the Encoded text block.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &quot;exp&quot;: 1654885447,
+  &quot;groups&quot;: null,
+  &quot;iat&quot;: 1654885147,
+  &quot;name&quot;: &quot;matt@infrahq.com&quot;,
+  &quot;nbf&quot;: 1654884847,
+  &quot;nonce&quot;: &quot;OxQpMFSv4p&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;strong&gt;iat&lt;/strong&gt; value is the time this token was issued. &lt;strong&gt;nbf&lt;/strong&gt; says that this token is not valid before this time. And &lt;strong&gt;exp&lt;/strong&gt; is the time when this token expires. We can translate those Unix Timestamps to more common date and time formats and can see that this token has a lifetime of 5 minutes. There is also a &lt;strong&gt;nonce&lt;/strong&gt; value in there that ensures the request is unique.&lt;/p&gt;
+
+&lt;p&gt;So the last two values in the token are the actual claim. Groups and Name. The &lt;strong&gt;name&lt;/strong&gt; is the user who is running the command and the &lt;strong&gt;groups&lt;/strong&gt; lists out the groups this user is a member of.&lt;/p&gt;
+
+&lt;p&gt;That information is used by the destination to determine what roles this user should be allowed to assume.&lt;/p&gt;
+
+&lt;p&gt;And that is what a JWT is and how they are used in Infra.&lt;/p&gt;
+
+&lt;p&gt;If you would like to see a video version of this document, check out this from our YouTube channel.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/UuKXMDHzcPc&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Matt Williams</name></author><category term="jwt" /><category term="foundations" /><summary type="html"></summary></entry></feed>
