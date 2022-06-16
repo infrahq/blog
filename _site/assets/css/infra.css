@@ -51,7 +51,7 @@ html, body {
 }
 
 .header img {
-  padding: 0 0 0 45px;
+  padding: 0 0 0 40px;
 }
 
 /* ============================================== home page layout */
@@ -117,6 +117,7 @@ article {
   line-height: .9em;
   letter-spacing: -0.06em;
   transition: .2s ease-in all;
+  margin: 0 0 10px -5px;
 }
 
 .post-link {
@@ -125,6 +126,7 @@ article {
   font-size: 6vw;
   line-height: 5vw;
   letter-spacing: -.4vw;
+  margin: 0 0 0 -5px;
 }
 
 a.post-link:visited {
