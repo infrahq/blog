@@ -144,10 +144,10 @@ p {
 
 .post-meta {
   font-family: neuzeit-grotesk, sans-serif;
-  padding: 0px 0 11px 12px;
+  padding: 0px 0 11px 0;
   display: block;
   color: #888c90;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .site-header {
@@ -188,7 +188,7 @@ p {
 }
 
 .page-content #share-buttons > div > svg {
-  fill: #000 ;
+  fill: #000;
 }
 
 /* ============================================== overide jekyll styles */
