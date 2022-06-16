@@ -1,5 +1,6 @@
 ---
 tags: oidc infra foundations
+author: Matt Williams
 ---
 
 # Foundations of Infra: OIDC
@@ -35,9 +36,4 @@ Assuming you have the access required to perform the action you ran, you will ge
 
 And that is how OIDC works in the context of Infra. This post is also available as a video on our YouTube channel.
 
-<https://www.youtube.com/watch?v=gGPyOUtXoKE>
-
-Author:  
-Matt Williams - Technovangelist @ Infra
-
-![Matt Williams - Technovangalist @ Infra ](https://raw.githubusercontent.com/infrahq/blog/d064a27e83742c9da69c3e00f1baa569df65dd1a/assets/img/InfraMattSig.svg)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gGPyOUtXoKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

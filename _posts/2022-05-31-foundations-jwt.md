@@ -1,5 +1,5 @@
 ---
-tags: jwt, foundations
+tags: jwt foundations
 author: Matt Williams
 ---
 
